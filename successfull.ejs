@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lingualern - Signup Successful</title>
+  <link rel="stylesheet" type="text/css" href="successfullstyle.css">
+</head>
+<body>
+  <header>
+    <div class="user-profile">
+      <div class="profile-toggle">
+        <div class="profile-dropdown">
+          <div class="profile-info">
+            <p>ID: <%= user.id %></p>
+            <p>Name: <%= user.name %></p>
+            <p>Email: <%= user.email %></p>
+            <p>CreatedAt: <%= user.createdAt %></p>
+          </div>
+          <div class="profile-actions">
+            <a style="color: deepskyblue;" href="#">Delete Account</a>
+            <a style="color: deepskyblue;" href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="options">
+      <button class="create-group">+ Create a New Group</button>
+      <button class="join-group">Join Already Created Groups</button>
+    </div>
+  </main>
+
+  <script src="successfull.js"></script>
+</body>
+</html>

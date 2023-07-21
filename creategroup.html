@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Group</title>
+  <link rel="stylesheet" type="text/css" href="creategroupstyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Group</h1>
+
+    <form id="createGroupForm">
+      <div class="input-container">
+        <label for="topic">Topic</label>
+        <input type="text" id="topic" required>
+      </div>
+
+      <div class="input-container">
+        <label for="maxPeople">Max People</label>
+        <select id="maxPeople" required>
+          <option value="">Select</option>
+      
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+     
+          <!-- Add options for numbers 1 to 10 -->
+        </select>
+      </div>
+
+      <div class="input-container">
+        <label for="language">Language</label>
+        <select id="language" required>
+          <option value="">Select</option>
+          <option value="english">English</option>
+          <option value="arabic">Arabic</option>
+          <option value="hindi">Hindi</option>
+          <option value="urdu">Urdu</option>
+          <option value="persian">Persian</option>
+          <option value="russian">Hindi</option>
+          <option value="turkish">Urdu</option>
+          <option value="french">Persian</option>
+        </select>
+      </div>
+
+      <div class="input-container">
+        <label for="level">Level</label>
+        <select id="level" required>
+          <option value="">Select</option>
+          <option value="beginner">Beginner</option>
+          <option value="upperbeginner">Upper Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="upperintermediate">Upper Intermediate</option>
+          <option value="advanced">Advanced</option>
+          <option value="upperadvanced">Upper Advanced</option>
+        </select>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      <div class="button-container">
+        <button id="cancelBtn">Cancel</button>
+        <button id="createGroupBtn">Create Group</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="create-group-script.js"></script>
+
+</body>
+</html>

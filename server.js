@@ -117,6 +117,49 @@ app.post("/login", (req, res) => {
   );
 });
 
+// Route for handling group creation
+app.post("/create-group", (req, res) => {
+  const { topic, maxPeople, language, ownerLevel } = req.body;
+
+  // Perform any necessary validations on the received data
+  if (!topic || !maxPeople || !language || !ownerLevel) {
+    return res.status(400).json({ error: "Please fill in all fields." });
+  }
+
+  const ownerId = req.user.id; // Assuming you have the authenticated user ID stored in req.user.id
+     
+  //get curernt data and time
+  const createdAt=new Date();
+  // Store the group data in the "groups" table
+  pool.query(
+    "INSERT INTO groups (topic, max_people, language, owner_id, owner_level,createdat) VALUES (?, ?, ?, ?, ?,?)",
+    [topic, maxPeople, language, ownerId, ownerLevel,createdAt],
+    (error, results) => {
+      if (error) {
+        console.error("Error storing group data:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+
+      const groupId = results.insertId;
+      res.json({ message: "Group created successfully", groupId });
+    }
+  );
+});
+
+// Route for fetching all groups
+app.get("/get-groups", (req, res) => {
+  pool.query("SELECT * FROM groups ORDER BY id DESC", (error, results) => {
+    if (error) {
+      console.error("Error fetching groups:", error);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    // Pass the groups data to the groups.ejs template
+    res.render("groups", { groups: results });
+  });
+});
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

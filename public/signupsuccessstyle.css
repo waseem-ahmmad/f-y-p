@@ -1,0 +1,88 @@
+body {
+    background-color: #101F33; /* Dark blue background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .user-profile {
+    position: relative;
+  }
+  
+  .profile-toggle {
+    width: 40px;
+    height: 40px;
+    background-color: #68C757; /* Light green button color */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .profile-toggle img {
+    width: 40px;
+    height:40px;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #FFF;
+    border-radius: 4px;
+    padding: 10px;
+    display: none;
+  }
+  
+  .profile-dropdown.show {
+    display: block;
+  }
+  
+  .profile-info p {
+    margin-bottom: 10px;
+  }
+  
+  .profile-actions a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+  }
+  
+  .options {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #68C757; /* Light green button color */
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a3016; /* Darker green on hover */
+  }
+  
+  button.create-group {
+    background-color: #303f2e; /* Light green button color */
+  }
+  
+  button.join-group {
+    background-color: #334b2f; /* Darker green button color */
+  }
+  

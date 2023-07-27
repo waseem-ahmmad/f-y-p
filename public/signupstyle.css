@@ -1,0 +1,68 @@
+body {
+    background-color: #101F33; /* Dark blue background color */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 10px;
+    text-align: center;
+    background-color: #213E5E; /* Light dark blue background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: #FFF; /* White text color */
+    margin-top: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  label {
+    color: #FFF;
+    margin-bottom: 4px;
+  }
+  
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #68C757; /* Light green button color */
+    color: #FFF;
+    margin-top: 5px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5BB44B; /* Darker green on hover */
+  }
+  
+  a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  button:active {
+    opacity: 0.7; /* Dimmed button color when clicked */
+  }
+  

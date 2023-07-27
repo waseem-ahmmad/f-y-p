@@ -1,0 +1,94 @@
+/* Global Styles */
+body {
+    background-color:#6e9fe8;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+  }
+  
+  .logo-container img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .language-level {
+    text-align: center;
+    
+  }
+  
+  .settings-container {
+    position: relative;
+  }
+  
+  .settings-container img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .settings-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+  }
+  
+  .settings-container:hover .settings-dropdown {
+    display: block;
+  }
+  
+  /* Main */
+  #groupListContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+#groupListContainer{
+    min-width: 70vw;
+    min-height: 10vh;
+}  
+
+#jointalk {
+    background-color: rgb(66, 169, 57);
+    color: #fff;
+    display: block;
+  margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+
+  }
+  
+  #jointalk:hover {
+    background-color: #09d909;
+  }
+
+  .groupbox{
+    border: 2px dotted black;
+    border-radius: 20px;
+  }
+  
+  
